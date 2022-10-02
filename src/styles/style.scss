@@ -1,0 +1,40 @@
+body {
+    background: rgb(47, 222, 213);
+
+    h1 {
+        color: rgb(15, 214, 32);
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    h2 {
+        color: rgb(214, 42, 15);
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+    h3 {
+        color: rgb(25, 15, 214);
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+    h4 {
+        color: rgb(214, 15, 144);
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+    h5 {
+        color: rgb(211, 214, 15);
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+    h6 {
+        color: rgb(158, 10, 192);
+        text-transform: lowercase;
+        font-size: 30px;
+        text-align: center;
+    }
+}
