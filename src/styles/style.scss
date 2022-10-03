@@ -1,40 +1,105 @@
-body {
-    background: rgb(47, 222, 213);
+// colour variable declaration
+$banner-bgcolor: #c0dbfc;
+$button-bgcolor: blueviolet;
+// font size variable declaration
 
-    h1 {
-        color: rgb(15, 214, 32);
-        text-transform: uppercase;
-        text-align: center;
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+// Common CSS
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+// Style for Navigation
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+
+    .logo {
+        a {
+            font-size: 20px;
+            color: rgb(25, 23, 23);
+            font-weight: 900;
+            font-family: cursive;
+        }
     }
 
-    h2 {
-        color: rgb(214, 42, 15);
-        text-transform: lowercase;
-        text-align: center;
+    .links {
+        a {
+            font-size: 16px;
+            color: rgb(0, 0, 0);
+            font-weight: 700;
+            font-family: Arial, sans-serif;
+            padding-left: 15px;
+        }
     }
+}
 
-    h3 {
-        color: rgb(25, 15, 214);
-        text-transform: lowercase;
-        text-align: center;
+// Style for Banner
+.banner {
+    background-color: $banner-bgcolor;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    .banner-text {
+
+        p {
+            text-transform: uppercase;
+            color: rgb(30, 29, 29);
+        }
+
+        h1 {
+            color: black;
+            font-size: 50px;
+            font-weight: 700;
+        }
+
+        button {
+            text-transform: uppercase;
+            background-color: $button-bgcolor;
+            padding: 20px 35px;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            margin-top: 15px;
+            cursor: pointer;
+            font-size: 16px;
+        }
     }
+}
 
-    h4 {
-        color: rgb(214, 15, 144);
-        text-transform: lowercase;
-        text-align: center;
-    }
+// Style for featured products
+.featured {
+    margin: 60px 0;
+}
 
-    h5 {
-        color: rgb(211, 214, 15);
-        text-transform: lowercase;
-        text-align: center;
-    }
+.products {
+    @extend .featured;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
 
-    h6 {
-        color: rgb(158, 10, 192);
-        text-transform: lowercase;
-        font-size: 30px;
-        text-align: center;
+    .product {
+        border: 1px solid gray;
+
+        img {
+            width: 100%;
+            height: 400px;
+        }
     }
 }
