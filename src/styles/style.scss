@@ -1,159 +1,324 @@
-// colour variable declaration
-$banner-bgcolor: #c0dbfc;
-$button-bgcolor: blueviolet;
-// font size variable declaration
+// colours variable declaration
+$banner-bgcolor: linear-gradient(0.25turn, pink, lightpink, tomato);
+$footer-bgcolor: linear-gradient(0.25turn, #fad2d9, #fbc4cd, #f79280);
+$starColor: tomato;
+$borderColor: #c4c3c3;
+$lightPara: #888787;
 
-
-@mixin banner-style() {
-    background-color: $banner-bgcolor;
+@mixin footer-banner() {
+    background-color: $footer-bgcolor;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
+@mixin text-handle($size, $color, $weight) {
+    font-size: $size;
+    color: $color;
+    font-weight: $weight;
+}
+
+@mixin upprecase() {
+    text-transform: uppercase;
+}
+
+@mixin btn-handle() {
+    background-color: tomato;
+    color: white;
+    padding: 20px 30px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 9px;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+@mixin griding($repete, $gap) {
+    display: grid;
+    grid-template-columns: repeat($repete, 1fr);
+    grid-gap: $gap;
+}
+
+@mixin flexing($justCont, $alignItem) {
+    display: flex;
+    justify-content: $justCont;
+    align-items: $alignItem;
+}
+
+//---------- Common CSS Start Here ----------//
 * {
     margin: 0;
     padding: 0;
     outline: 0;
 }
 
-// Common CSS
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+.marginY {
+    margin: 60px 0;
 }
 
 a {
     text-decoration: none;
 }
 
+h1 {
+    @include text-handle(50px, black, 900)
+}
+
+h2 {
+    @include text-handle(35px, black, 700);
+    @include upprecase();
+    text-align: center;
+}
+
+h3 {
+    @include text-handle(25px, black, 700)
+}
+
+h4 {
+    @include text-handle(20px, black, 700);
+    margin: 7px 0;
+}
+
+p {
+    @include text-handle(18px, black, 500)
+}
+
+.light-para {
+    @include text-handle(18px, #888787, 600)
+}
+
 // Style for Navigation
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 0;
+    @include flexing(space-between, center);
+    padding: 30px 0;
 
     .logo {
         a {
-            font-size: 20px;
-            color: rgb(25, 23, 23);
-            font-weight: 900;
-            font-family: cursive;
+            @include text-handle(20px, black, 900);
         }
     }
 
     .links {
         a {
-            font-size: 16px;
-            color: rgb(0, 0, 0);
-            font-weight: 700;
-            font-family: Arial, sans-serif;
+            @include text-handle(16px, black, 700);
             padding-left: 15px;
         }
     }
 }
 
-// Style for Banner
-.banner {
-    @include banner-style();
+// Style for Top-Banner Section
+.bannerMain {
+    background: $banner-bgcolor;
+    @include flexing(space-evenly, center);
 
-    .banner-text {
-
+    .bannerText {
         p {
-            text-transform: uppercase;
-            color: rgb(30, 29, 29);
-        }
-
-        h1 {
-            color: black;
-            font-size: 50px;
-            font-weight: 700;
+            @include upprecase();
         }
 
         button {
-            text-transform: uppercase;
-            background-color: $button-bgcolor;
-            padding: 20px 35px;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            margin-top: 15px;
-            cursor: pointer;
-            font-size: 16px;
+            @include btn-handle();
+        }
+    }
+
+    .bannerImg {
+        img {
+            width: 90%;
+            margin-bottom: -5px;
         }
     }
 }
 
-// Style for featured products
-.featured {
-    margin: 60px 0;
 
-
-}
-
-h2 {
-    text-align: center;
-}
-
-.products {
-    @extend .featured;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-
+// Style for Featured Products Section
+@mixin singleProduct() {
     .product {
-        border: 1px solid gray;
+        border: 1px solid $borderColor;
+        border-radius: 9px;
 
+        .productImg {
+            img {
+                width: 100%;
+                border-radius: 9px 9px 0px 0px;
+            }
+        }
+
+        .productDetails {
+            padding: 10px;
+            text-align: center;
+
+            .star-color {
+                color: $starColor;
+                font-size: 14px;
+                margin: 8px 0
+            }
+        }
+    }
+}
+
+.featuredMain {
+
+    .featuredProducts {
+        padding: 50px 0;
+        @include griding(3, 20px);
+        @include singleProduct();
+    }
+}
+
+// Style for Offer Banner Section
+.offerBanner {
+    background: $footer-bgcolor;
+    @include flexing(space-evenly, center);
+
+    .offerText {
+        .offerh1 {
+            font-size: 60px;
+        }
+
+        .offerh2 {
+            font-weight: 400;
+            color: $lightPara;
+        }
+
+        button {
+            @include btn-handle();
+        }
+    }
+
+    .offerImg {
         img {
             width: 100%;
-            height: 400px;
-        }
-
-        .product-details {
-            @extend h2;
         }
     }
 }
 
-// Style for Offer Banner
-.offerBanner {
-    background-color: #c0dbfc
-}
-
-.offer {
-    @include banner-style();
-}
-
-// Style for Service Facilities
-.Facilities {
-    margin: 70px 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-
-    img {
-        width: 100%;
+// Style for Popular Product Section
+.popularProductMain {
+    .popularProducts {
+        padding: 50px 0;
+        @include griding(4, 20px);
+        @include singleProduct();
     }
 }
 
-// Style for journals 
-.journals {
-    @extend .Facilities;
+// Style for Services Section
+.servicesMain {
+    .services {
+        padding: 50px 0;
+        @include griding(4, 20px);
+
+        .service {
+            text-align: center;
+            padding: 20px;
+
+            .serviceIcon {
+                color: #f54e86;
+                margin: 7px 0;
+                font-size: 30px;
+            }
+        }
+    }
 }
 
-// Style for follow Us 
-.followed {
-    @extend .Facilities;
+// Style for Trending Products Section
+.trendingProductsMain {
+    .trendingProducts {
+        padding: 50px 0;
+        @include griding(4, 20px);
+        @include singleProduct();
+    }
 }
 
-// Style for footer
+// Style for journals Section
+.journalMain {
+    .journals {
+        padding: 50px 0;
+        @include griding(3, 20px);
+
+        .journal {
+            border: 1px solid $borderColor;
+            border-radius: 9px;
+
+            .journalImg {
+                img {
+                    width: 100%;
+                    border-radius: 9px 9px 0px 0px;
+                }
+            }
+
+        }
+
+        .journalText {
+            padding: 20px;
+
+            .journalFooter {
+                margin-top: 20px;
+
+                .journalIcon {
+                    color: $lightPara;
+                    margin-right: 15px;
+                }
+            }
+        }
+    }
+}
+
+// Style for Follow Us Section 
+.FollowUsMain {
+    .FollowUs {
+        padding: 50px 0;
+        @include griding(4, 20px);
+
+        .Follow {
+            border: 1px solid $borderColor;
+            border-radius: 9px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 9px;
+            }
+        }
+    }
+}
+
+// Style for Footer Section
+
 .footerMain {
-    background-color: lightgrey;
-    padding: 100px 0;
+    background: $footer-bgcolor;
+    padding: 60px 0;
 
-    .footer {
-        @extend .Facilities;
-        margin-bottom: 0;
+    .footers {
+        @include griding(4, 20px);
+        padding-bottom: 30px;
+        border-bottom: 1px solid #b3b1b1;
+
+        .footer {
+            .heading {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .Copyright {
+        text-align: center;
+        margin-top: 40px;
+
+        .link {
+            color: $starColor;
+        }
     }
 }
+
+/*
+*/

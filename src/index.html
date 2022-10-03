@@ -4,9 +4,27 @@
 <head>
     <meta charset='UTF-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta http-equiv="content-language" content="en">
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta name="keywords" content="nasirul866, blog, ecommerce, e-commerce">
+    <meta name="author" content="nasirul866">
+    <meta name="publisher" content="nasirul866">
+    <meta name="copyright" content="nasirul866">
+    <meta name="description"
+        content="Here you will find new clothes in different designs. We provide good quality fabrics keeping in mind the latest designs.">
+    <meta name="page-topic" content="ecommerce">
+    <meta name="page-type" content="e-commerce, ecommerce">
+    <meta name="audience" content="Everyone">
     <title>FASHION-BD.</title>
     <link rel='shortcut icon' href='../src/img/logo.jpg' type='image/x-icon'>
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -22,8 +40,8 @@
                 <a href='#'>Product</a>
                 <a href='#'>Brand</a>
                 <a href='#'>Contract</a>
-                <a href='#'>Hart</a>
-                <a href='#'>Cart</a>
+                <a href='#'><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href='#'><i class="fa-solid fa-heart"></i></a>
             </div>
         </nav>
     </header>
@@ -32,253 +50,379 @@
     ---------------------->
     <main>
         <!-- Banner part start -->
-        <section class="banner">
-            <div class='banner-text'>
-                <p>Ultimate Collection</p>
+        <section class="bannerMain">
+            <div class='bannerText'>
+                <p class="light-para">Ultimate Collection</p>
                 <h1>Complete Men's <br> Fashion Here</h1>
                 <button>Shop Now</button>
             </div>
-            <div class='banner-img'>
+            <div class='bannerImg'>
                 <img src='../src/img/banner.png' alt=''>
             </div>
         </section>
         <!-- Banner part end -->
         <!-- Featured Products part start -->
-        <section class="container">
-            <div class='featured'>
-                <h2>featured products</h2>
-            </div>
-            <div class='products'>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image1.jpg' alt='image1'>
-                    </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>350</span></p>
-                    </div>
+        <section class="featuredMain marginY">
+            <div class='container'>
+                <div class='featureHead'>
+                    <h2>Featured Products</h2>
                 </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
+                <div class='featuredProducts'>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image3.jpg' alt=''>
-                    </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>230</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Featured Products part end -->
         <!-- Offer Banner part start -->
-        <section class="offerBanner">
-            <div class='container'>
-                <div class='offer'>
-                    <div class='offer-text'>
-                        <h1>50% Off</h1>
-                        <h2>All Men's Collection</h2>
-                        <button>Shop Now</button>
-                    </div>
-                    <div class='offer-img'>
-                        <img src='../src/img/banner.png' alt=''>
-                    </div>
-                </div>
+        <section class="offerBanner marginY">
+            <div class='offerText'>
+                <h1 class="offerh1">50% Off</h1>
+                <h2 class="offerh2">All Men's Collection</h2>
+                <button>Shop Now</button>
+            </div>
+            <div class='offerImg'>
+                <img src='../src/img/image3.jpg' alt=''>
             </div>
         </section>
         <!-- Offer Banner part end -->
-        <!-- Most Popular part start -->
-        <section class="container">
-            <div class='popularProduct'>
-                <h2>Most Popular</h2>
-            </div>
-            <div class='products'>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
-                    </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
-                    </div>
+        <!-- Most Popular Product part start -->
+        <section class="popularProductMain marginY">
+            <div class='container'>
+                <div class='popularHeading'>
+                    <h2>Most Popular</h2>
                 </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
+                <div class='popularProducts'>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
-                    </div>
-                </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
-                    </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Most Popular part end -->
-        <!-- Service Facilities part start -->
-        <section class="container">
-            <div class='Facilities'>
-                <div class='Faciliti'>
-                    <div class=''>
-                        <img src='./img/logo.jpg' alt=''>
+        <!-- Services part start -->
+        <section class="servicesMain marginY">
+            <div class='container'>
+                <div class='services'>
+                    <div class='service'>
+                        <i class="fa-solid fa-sack-dollar serviceIcon"></i>
+                        <h4>Money Back Guarantee</h4>
+                        <p class="light-para">amet consectetur adipisicing consectetur adipisicing elit.</p>
                     </div>
-                    <div class=''>
-                        <h5>Lorem ipsum dolor sit </h5>
-                        <p>amet consectetur adipisicing consectetur adipisicing elit.</p>
+                    <div class='service'>
+                        <i class="fa-solid fa-truck serviceIcon"></i>
+                        <h4>Free Delivery</h4>
+                        <p class="light-para">amet consectetur adipisicing consectetur adipisicing elit.</p>
                     </div>
-                </div>
-                <div class='Faciliti'>
-                    <div class=''>
-                        <img src='./img/logo.jpg' alt=''>
+                    <div class='service'>
+                        <i class="fa-solid fa-headphones serviceIcon"></i>
+                        <h4>Always Support</h4>
+                        <p class="light-para">amet consectetur adipisicing consectetur adipisicing elit.</p>
                     </div>
-                    <div class=''>
-                        <h5>Lorem ipsum dolor sit </h5>
-                        <p>amet consectetur adipisicing consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class='Faciliti'>
-                    <div class=''>
-                        <img src='./img/logo.jpg' alt=''>
-                    </div>
-                    <div class=''>
-                        <h5>Lorem ipsum dolor sit </h5>
-                        <p>amet consectetur adipisicing consectetur adipisicing elit.</p>
-                    </div>
-                </div>
-                <div class='Faciliti'>
-                    <div class=''>
-                        <img src='./img/logo.jpg' alt=''>
-                    </div>
-                    <div class=''>
-                        <h5>Lorem ipsum dolor sit </h5>
-                        <p>amet consectetur adipisicing consectetur adipisicing elit.</p>
+                    <div class='service'>
+                        <i class="fa-solid fa-shield-halved serviceIcon"></i>
+                        <h4>Secure Payment</h4>
+                        <p class="light-para">amet consectetur adipisicing consectetur adipisicing elit.</p>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Service Facilities part end -->
-        <!-- Trending Product part start -->
-        <section class="container">
-            <div class='Trending'>
-                <h2>Trending Product</h2>
-            </div>
-            <div class='products'>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
-                    </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
-                    </div>
+        <!-- Services part end -->
+        <!-- Trending Products part start -->
+        <section class="trendingProductsMain marginY">
+            <div class='container'>
+                <div class='productsHeading'>
+                    <h2>Trending Product</h2>
                 </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
+                <div class='trendingProducts'>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                </div>
-                <div class='product'>
-                    <div class=''>
-                        <img src='../src/img/image2.jpg' alt=''>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
-                    <div class='product-details'>
-                        <p>discription is here</p>
-                        <p>rating</p>
-                        <p>$<span>410</span></p>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
+                    </div>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
+                    </div>
+                    <div class='product'>
+                        <div class='productImg'>
+                            <img src='../src/img/image1.jpg' alt='image1'>
+                        </div>
+                        <div class='productDetails'>
+                            <p class="light-para">discription is here</p>
+                            <p class="star-color">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </p>
+                            <h3>$<span id="product-price">350</span></h3>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Trending Product part end -->
         <!-- Journal part start -->
-        <section class="container">
-            <div class='JournalMain'>
-                <h2>FASHION-BD. Journal</h2>
+        <section class="journalMain marginY">
+            <div class='container'>
+                <div class='journalHeading'>
+                    <h2>FASHION-BD. Journal</h2>
+                </div>
                 <div class='journals'>
                     <div class='journal'>
-                        <div class=''>
+                        <div class='journalImg'>
                             <img src='./img/image1.jpg' alt=''>
                         </div>
-                        <div class=''>
-                            <p>Date is here</p>
-                            <h5>journal heading journal heading journal headingjournal heading journal heading</h5>
-                            <div class=''>
-                                <span>Man's Fashion</span>
-                                <span>comment</span>
+                        <div class='journalText'>
+                            <p class="light-para">10 October, 2022</p>
+                            <h4>International Journal of Clothing Science and Technology.</h4>
+                            <div class='journalFooter'>
+                                <i class="fa-solid fa-book-open journalIcon"></i>
+                                <span class="light-para journalIcon">Man's Fashion</span>
+                                <i class="fa-regular fa-comment journalIcon"></i>
+                                <span class="light-para">2 comment</span>
                             </div>
                         </div>
                     </div>
                     <div class='journal'>
-                        <div class=''>
+                        <div class='journalImg'>
                             <img src='./img/image1.jpg' alt=''>
                         </div>
-                        <div class=''>
-                            <p>Date is here</p>
-                            <h5>journal heading journal heading journal headingjournal heading journal heading</h5>
-                            <div class=''>
-                                <span>Man's Fashion</span>
-                                <span>comment</span>
+                        <div class='journalText'>
+                            <p class="light-para">10 October, 2022</p>
+                            <h4>International Journal of Clothing Science and Technology.</h4>
+                            <div class='journalFooter'>
+                                <i class="fa-solid fa-book-open journalIcon"></i>
+                                <span class="light-para journalIcon">Man's Fashion</span>
+                                <i class="fa-regular fa-comment journalIcon"></i>
+                                <span class="light-para">2 comment</span>
                             </div>
                         </div>
                     </div>
                     <div class='journal'>
-                        <div class=''>
+                        <div class='journalImg'>
                             <img src='./img/image1.jpg' alt=''>
                         </div>
-                        <div class=''>
-                            <p>Date is here</p>
-                            <h5>journal heading journal heading journal headingjournal heading journal heading</h5>
-                            <div class=''>
-                                <span>Man's Fashion</span>
-                                <span>comment</span>
+                        <div class='journalText'>
+                            <p class="light-para">10 October, 2022</p>
+                            <h4>International Journal of Clothing Science and Technology.</h4>
+                            <div class='journalFooter'>
+                                <i class="fa-solid fa-book-open journalIcon"></i>
+                                <span class="light-para journalIcon">Man's Fashion</span>
+                                <i class="fa-regular fa-comment journalIcon"></i>
+                                <span class="light-para">2 comment</span>
                             </div>
                         </div>
                     </div>
@@ -286,21 +430,23 @@
             </div>
         </section>
         <!-- Journal part end -->
-        <!-- Follow part start -->
-        <section class="container">
-            <div class=''>
-                <h2>Follow Us</h2>
-                <div class='followed'>
-                    <div class='media'>
+        <!-- Follow Us part start -->
+        <section class="FollowUsMain marginY">
+            <div class='container'>
+                <div class='FollowUsHeading'>
+                    <h2>Follow Us</h2>
+                </div>
+                <div class='FollowUs'>
+                    <div class='Follow'>
                         <img src='./img/logo.jpg' alt=''>
                     </div>
-                    <div class='media'>
+                    <div class='Follow'>
                         <img src='./img/logo.jpg' alt=''>
                     </div>
-                    <div class='media'>
+                    <div class='Follow'>
                         <img src='./img/logo.jpg' alt=''>
                     </div>
-                    <div class='media'>
+                    <div class='Follow'>
                         <img src='./img/logo.jpg' alt=''>
                     </div>
                 </div>
@@ -314,23 +460,47 @@
     <!-- Footer part start -->
     <footer class="footerMain">
         <div class='container'>
-            <div class='footer'>
-                <div class=''>
-                    <p>About us</p>
+            <div class='footers'>
+                <div class='footer'>
+                    <h4 class="heading">About us</h4>
+                    <p class='light-para'>How we are</p>
+                    <p class='light-para'>Work with us</p>
+                    <p class='light-para'>Become a supplier</p>
+                    <p class='light-para'>Investor relation</p>
+                    <p class='light-para'>Our device</p>
+                    <p class='light-para'>Programs</p>
                 </div>
-                <div class=''>
-                    <p>Usefull link</p>
+                <div class='footer'>
+                    <h4 class="heading">Usefull link</h4>
+                    <p class='light-para'>Contact Us</p>
+                    <p class='light-para'>Common FAQS</p>
+                    <p class='light-para'>Terms and condition</p>
+                    <p class='light-para'>Return policy</p>
+                    <p class='light-para'>Track Order</p>
+                    <p class='light-para'>Cancellation</p>
                 </div>
-                <div class=''>
-                    <p>Online Shoping</p>
+                <div class='footer'>
+                    <h4 class="heading">Online Shoping</h4>
+                    <p class='light-para'>How we are</p>
+                    <p class='light-para'>Work with us</p>
+                    <p class='light-para'>Become a supplier</p>
+                    <p class='light-para'>Investor relation</p>
+                    <p class='light-para'>Our device</p>
+                    <p class='light-para'>Programs</p>
                 </div>
-                <div class=''>
-                    <p>Experience app on mobile</p>
+                <div class='footer'>
+                    <h4 class="heading">Experience app on mobile</h4>
+                    <p class='light-para'>How we are</p>
+                    <p class='light-para'>Work with us</p>
+                    <p class='light-para'>Become a supplier</p>
+                    <p class='light-para'>Investor relation</p>
+                    <p class='light-para'>Our device</p>
+                    <p class='light-para'>Programs</p>
                 </div>
             </div>
         </div>
-        <div class=''>
-            <p>Copyright @ 2022 FASHION-BD. All Right Reserved</p>
+        <div class='Copyright'>
+            <p class="light-para">Copyright &copy; 2022 <span class="link">FASHION-BD.</span> All right reserved.</p>
         </div>
     </footer>
     <!-- Footer part end -->
