@@ -27,6 +27,13 @@ $lightPara: #888787;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
+
+    &:hover {
+        background-color: white;
+        color: $btnBgColor;
+        font-weight: 700;
+        border: 1px solid $btnBgColor;
+    }
 }
 
 @mixin griding($repete, $gap) {
@@ -39,6 +46,13 @@ $lightPara: #888787;
     display: flex;
     justify-content: $justCont;
     align-items: $alignItem;
+}
+
+@mixin transition() {
+    -moz-transition: all linear .5s;
+    -webkit-transition: all linear .5s;
+    -o-transition: all linear .5s;
+    transition: all linear .5s;
 }
 
 //---------- Common CSS Start Here ----------//
@@ -107,6 +121,11 @@ nav {
         a {
             @include text-handle(16px, black, 700);
             padding-left: 15px;
+            @include transition();
+
+            &:hover {
+                color: $btnBgColor;
+            }
         }
     }
 }
@@ -142,6 +161,30 @@ nav {
     .product {
         border: 1px solid $borderColor;
         border-radius: 9px;
+        position: relative;
+        @include transition();
+
+        &:hover {
+            .productBtns {
+                position: absolute;
+                bottom: 120px;
+                right: 10px;
+                display: block;
+
+
+                p {
+                    color: $btnBgColor;
+                    font-size: 40px;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+
+            }
+        }
+
+        .productBtns {
+            display: none;
+        }
 
         .productImg {
             img {
@@ -279,13 +322,39 @@ nav {
         @include griding(4, 20px);
 
         .Follow {
-            border: 1px solid $borderColor;
+            border: none;
             border-radius: 9px;
+            position: relative;
+            @include transition();
+
+            &:hover {
+                background-color: $btnBgColor;
+
+                .FollowIcon {
+                    //visibility: visible;
+                    display: block;
+                }
+
+                img {
+                    opacity: .3;
+                    ;
+                }
+            }
 
             img {
                 width: 100%;
                 height: 100%;
                 border-radius: 9px;
+            }
+
+            .FollowIcon {
+                position: absolute;
+                top: 78px;
+                left: 105px;
+                color: #fff;
+                font-size: 35px;
+                //visibility: hidden;
+                display: none;
             }
         }
     }
@@ -312,11 +381,24 @@ nav {
                 border: 1px solid $btnBgColor;
                 border-radius: 9px;
                 margin-bottom: 10px;
+                padding: 9px;
+                @include transition();
+
+                &:hover {
+                    background-color: $btnBgColor;
+
+                    i,
+                    p,
+                    h4 {
+                        color: white;
+                    }
+                }
 
                 .fotIcon {
                     font-size: 20px;
                     color: $btnBgColor;
                 }
+
             }
 
             .apple {
