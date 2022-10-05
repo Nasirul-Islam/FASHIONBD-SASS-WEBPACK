@@ -27,6 +27,7 @@ $lightPara: #888787;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 500;
+    @include transition(0.4s);
 
     &:hover {
         background-color: white;
@@ -48,11 +49,11 @@ $lightPara: #888787;
     align-items: $alignItem;
 }
 
-@mixin transition() {
-    -moz-transition: all linear .5s;
-    -webkit-transition: all linear .5s;
-    -o-transition: all linear .5s;
-    transition: all linear .5s;
+@mixin transition($sec) {
+    -moz-transition: all linear $sec;
+    -webkit-transition: all linear $sec;
+    -o-transition: all linear $sec;
+    transition: all linear $sec;
 }
 
 //---------- Common CSS Start Here ----------//
@@ -120,14 +121,39 @@ nav {
     .links {
         a {
             @include text-handle(16px, black, 700);
-            padding-left: 15px;
-            @include transition();
+            padding: 10px;
+            border-radius: 9px;
+            @include transition(0.4s);
 
             &:hover {
-                color: $btnBgColor;
+                background-color: $btnBgColor;
+                color: white;
             }
         }
+
+        .shopping {
+            position: relative;
+
+            .count {
+                position: absolute;
+                top: -15px;
+                right: -5px;
+                font-size: 22px;
+            }
+        }
+
+        .heart {
+            @extend .shopping;
+        }
     }
+}
+
+.navIcon {
+    background-color: tomato;
+    color: #ffd332 !important;
+    border-radius: 50px !important;
+    padding: 12px !important;
+    margin: 5px;
 }
 
 // Style for Top-Banner Section
@@ -162,7 +188,7 @@ nav {
         border: 1px solid $borderColor;
         border-radius: 9px;
         position: relative;
-        @include transition();
+        @include transition(0.4s);
 
         &:hover {
             .productBtns {
@@ -173,10 +199,20 @@ nav {
 
 
                 p {
-                    color: $btnBgColor;
-                    font-size: 40px;
-                    padding: 10px;
+                    background-color: $btnBgColor;
+                    color: white;
+                    font-size: 25px;
+                    padding: 8px;
+                    margin-bottom: 9px;
+                    border: none;
+                    border-radius: 9px;
                     cursor: pointer;
+                    @include transition(0.4s);
+
+                    &:hover {
+                        color: $btnBgColor;
+                        background-color: white;
+                    }
                 }
 
             }
@@ -325,7 +361,7 @@ nav {
             border: none;
             border-radius: 9px;
             position: relative;
-            @include transition();
+            @include transition(0.4s);
 
             &:hover {
                 background-color: $btnBgColor;
@@ -365,6 +401,7 @@ nav {
 .footerMain {
     background: $footer-bgcolor;
     padding: 60px 0;
+    position: relative;
 
     .footers {
         @include griding(4, 20px);
@@ -382,7 +419,7 @@ nav {
                 border-radius: 9px;
                 margin-bottom: 10px;
                 padding: 9px;
-                @include transition();
+                @include transition(0.4s);
 
                 &:hover {
                     background-color: $btnBgColor;
@@ -414,6 +451,38 @@ nav {
         .link {
             color: $starColor;
         }
+    }
+}
+
+// scroll animation
+#scrollToTop {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    box-shadow: 0 0 20px 5px rgba(244, 46, 46, 0.6);
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+    @include flexing(center, center);
+    margin-bottom: -12rem;
+    //transition: margin-bottom 0.4s;
+    @include transition(0.4s);
+
+    &.active {
+        margin-bottom: 0;
+    }
+
+    &:hover {
+        animation-name: rotate;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(2520deg);
     }
 }
 
