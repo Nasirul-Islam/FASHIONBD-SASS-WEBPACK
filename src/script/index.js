@@ -9,13 +9,19 @@ let shoppingMenu = document.getElementById("shoppingMenu");
 let heartMenu = document.getElementById("heartMenu");
 let shopCount = document.getElementById("shopCount");
 let heartCount = document.getElementById("heartCount");
+// Added Message
+let AddedCart = document.getElementById("AddedCart");
+let AddedHeart = document.getElementById("AddedHeart");
 
 // Shopping Cart
 for (const item of shopping) {
     item.addEventListener("click", (e) => {
         shoppingMenu.classList.add("navIcon");
         shopCount.innerText = parseInt(shopCount.innerText) + 1;
-        console.log(shopCount.innerText);
+        AddedCart.style.visibility = "visible";
+        setTimeout(() => {
+            AddedCart.style.visibility = "hidden";
+        }, 2000);
     })
 }
 // Heart Cart
@@ -23,7 +29,10 @@ for (const item of heart) {
     item.addEventListener("click", (e) => {
         heartMenu.classList.add("navIcon");
         heartCount.innerText = parseInt(heartCount.innerText) + 1;
-        console.log(heartCount.innerText);
+        AddedHeart.style.visibility = "visible";
+        setTimeout(() => {
+            AddedHeart.style.visibility = "hidden";
+        }, 3000);
     })
 
 }
@@ -42,9 +51,10 @@ window.addEventListener("scroll", () => {
 document.querySelector('#scrollToTop').addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
 })
-// scroll animation end
 
 
-// console.log("Cart has been added")
+// console.log(AddedCart);
+// console.log(AddedHeart);
+
 
 // sum(3, 4)

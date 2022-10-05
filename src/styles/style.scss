@@ -131,7 +131,7 @@ nav {
             }
         }
 
-        .shopping {
+        .shoppingMain {
             position: relative;
 
             .count {
@@ -142,8 +142,8 @@ nav {
             }
         }
 
-        .heart {
-            @extend .shopping;
+        .heartMain {
+            @extend .shoppingMain;
         }
     }
 }
@@ -191,12 +191,21 @@ nav {
         @include transition(0.4s);
 
         &:hover {
+            .productImg {
+                overflow: hidden;
+
+                img {
+                    transform: scale(1.6);
+                    @include transition(0.4s);
+                }
+            }
+
             .productBtns {
                 position: absolute;
                 bottom: 120px;
                 right: 10px;
-                display: block;
-
+                visibility: visible;
+                z-index: 1;
 
                 p {
                     background-color: $btnBgColor;
@@ -219,7 +228,7 @@ nav {
         }
 
         .productBtns {
-            display: none;
+            visibility: hidden;
         }
 
         .productImg {
@@ -413,12 +422,17 @@ nav {
                 margin-bottom: 20px;
             }
 
+            p {
+                cursor: pointer;
+            }
+
             .google {
                 @include flexing(space-evenly, center);
                 border: 1px solid $btnBgColor;
                 border-radius: 9px;
                 margin-bottom: 10px;
                 padding: 9px;
+                cursor: pointer;
                 @include transition(0.4s);
 
                 &:hover {
@@ -465,7 +479,6 @@ nav {
     height: 80px;
     @include flexing(center, center);
     margin-bottom: -12rem;
-    //transition: margin-bottom 0.4s;
     @include transition(0.4s);
 
     &.active {
@@ -486,5 +499,179 @@ nav {
     }
 }
 
-/*
-*/
+// Added Message
+#AddedCart {
+    position: fixed;
+    bottom: 5rem;
+    right: 39rem;
+    box-shadow: 0 0 10px 2px rgba(159, 148, 148, 0.6);
+    border-radius: 4px;
+    padding: 8px 16px;
+    color: $btnBgColor;
+    font-weight: 600;
+    visibility: hidden;
+}
+
+#AddedHeart {
+    @extend #AddedCart;
+    bottom: 2.5rem;
+}
+
+/* ========================== /*
+        Media Queary
+/* ========================== */
+
+$media-desktop: "only screen and (max-width : 1024px)";
+$media-tablet: "only screen and (max-width : 768px)";
+$media-mobile: "only screen and (max-width : 600px)";
+$media-mobile-sm: "only screen and (max-width : 480px)";
+
+
+@mixin AllMobile() {
+    nav {
+        .links {
+            display: none;
+        }
+    }
+
+    .bannerMain {
+        flex-direction: column;
+        padding: 40px 0;
+
+        .bannerImg {
+            display: none;
+
+        }
+    }
+
+    .featuredMain {
+        .featuredProducts {
+            @include griding(1, 10px);
+        }
+    }
+
+    .offerBanner {
+        padding: 30px 0;
+        flex-direction: column-reverse;
+
+        .offerText {
+            text-align: center;
+        }
+    }
+
+    .popularProductMain {
+        .popularProducts {
+            @include griding(1, 10px);
+        }
+    }
+
+    .servicesMain {
+        .services {
+            @include griding(1, 10px);
+        }
+    }
+
+    .trendingProductsMain {
+        .trendingProducts {
+            @include griding(1, 10px);
+        }
+    }
+
+    .journalMain {
+        .journals {
+            @include griding(1, 10px);
+        }
+    }
+
+    .FollowUsMain {
+        .FollowUs {
+            @include griding(1, 10px);
+        }
+    }
+
+    .footerMain {
+        text-align: center;
+
+        .footers {
+            @include griding(1, 10px);
+        }
+    }
+}
+
+@media #{$media-mobile} {
+    @include AllMobile();
+}
+
+@media #{$media-mobile-sm} {
+    @include AllMobile();
+}
+
+// tablet device
+@media #{$media-tablet} {
+    nav {
+        .links {
+            display: none;
+        }
+    }
+
+    .bannerMain {
+        flex-direction: column;
+        padding: 40px 0;
+
+        .bannerImg {
+            display: none;
+
+        }
+    }
+
+    .featuredMain {
+        .featuredProducts {
+            @include griding(2, 20px);
+        }
+    }
+
+    .offerBanner {
+
+        .offerText {
+            text-align: center;
+        }
+    }
+
+    .popularProductMain {
+        .popularProducts {
+            @include griding(2, 20px);
+        }
+    }
+
+    .servicesMain {
+        .services {
+            @include griding(2, 20px);
+        }
+    }
+
+    .trendingProductsMain {
+        .trendingProducts {
+            @include griding(2, 20px);
+        }
+    }
+
+    .journalMain {
+        .journals {
+            @include griding(2, 20px);
+        }
+    }
+
+    .FollowUsMain {
+        .FollowUs {
+            @include griding(2, 20px);
+        }
+    }
+
+    .footerMain {
+        text-align: center;
+
+        .footers {
+            @include griding(2, 20px);
+        }
+    }
+}
